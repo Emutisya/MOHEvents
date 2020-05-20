@@ -26,3 +26,6 @@ Route::post('/save-events','eregisterController@store');
 
 Route::get('/events','eregisterController@allevents');
 Route::delete('/role-deletee/{id}','eregisterController@registerdelete');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
