@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-
-
 </head>
 
 <body>
@@ -30,7 +28,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link  active" href="/admin">
+              <a class="nav-link" href="/admin">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">DashBoard</span>
               </a>
@@ -42,12 +40,6 @@
                 <span class="nav-link-text">Event Registration</span>
               </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/vacancy">
-                  <i class="ni ni-bullet-list-67 text-default"></i>
-                  <span class="nav-link-text">Vacancies</span>
-                </a>
-              </li>
 
   </nav>
   <!-- Main content -->
@@ -89,38 +81,33 @@
             </li>
 
 
-
-                <div class="dropdown-divider"></div>
-                <li class="nav-item dropdown">
-                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
-                              <span class="avatar avatar-sm rounded-circle">
+                  <span class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">       {{ Auth::user()->name }} </span>
-                                </div>
-                                </div>
-                                </a>
+                    <span class="mb-0 text-sm  font-weight-bold">Name</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-menu  dropdown-menu-right ">
+                <div class="dropdown-header noti-title">
+                  <h6 class="text-overflow m-0">Welcome!</h6>
+                </div>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-single-02"></i>
+                  <span>My profile</span>
+                </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                       <svg class="bi bi-power" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"/>
-                                                        <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z"/>
-                                                      </svg>
-                                     <span>Logout</span>
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-
+                <div class="dropdown-divider"></div>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-user-run"></i>
+                  <span>Logout</span>
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -141,16 +128,47 @@
                 </ol>
               </nav>
             </div>
-       @yield('header')
+            <div class="col-lg-6 col-5 text-right">
+              <a href="#" class="btn btn-sm btn-neutral">New</a>
+              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Page content -->
-    <main class="card-body">
-        @include('includes.flashmsg')
-        @yield('content')
-    </main>
+
+    {!! Form::open(['action'=>['VacanciesController@update',$vacancy->id],'method'=>'POST']) !!}
+
+    <div class="form-group">
+
+        {{form::label('title', 'Title')}}
+
+        {{form::Text('title',$vacancy->title,['class' =>'form-control','placeholder'=>'Title'])}}
+
+    </div>
+
+ <div class="form-group">
+
+            {{form::label('description', 'Description')}}
+
+            {{form::Textarea('description',$vacancy->description,['class' =>'form-control','placeholder'=>'Description'])}}
+
+        </div>
+
+
+
+
+            {{Form::hidden('_method','PUT')}}
+
+            {{Form::submit('Update Vacancy',['class'=>'btn btn-primary'])}}
+
+
+
+    {!! Form::close() !!}
+
+
+
 
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -163,3 +181,36 @@
 </body>
 
 </html>
+
+{{--{!! Form::open(['action'=>['VacanciesController@update',$vacancy->id],'method'=>'POST']) !!}
+
+    <div class="form-group">
+
+        {{form::label('title', 'Title')}}
+
+        {{form::Text('title',$vacancy->title,['class' =>'form-control','placeholder'=>'Title'])}}
+
+    </div>
+
+    <div class="form-group">
+
+            {{form::label('description', 'Description')}}
+
+            {{form::Textarea('description',$vacancy->description,['class' =>'form-control','placeholder'=>'Description'])}}
+
+        </div>
+
+
+
+
+            {{Form::hidden('_method','PUT')}}
+
+            {{Form::submit('Update Vacancy',['class'=>'btn btn-primary'])}}
+
+
+
+    {!! Form::close() !!}
+
+
+
+    @endsection --}}

@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,8 @@ Route::post('/save-events','eregisterController@store');
 Route::get('/events','eregisterController@allevents');
 Route::delete('/role-deletee/{id}','eregisterController@registerdelete');
 Auth::routes();
+Route::resource('vacancy', 'VacanciesController');
+// Route::get('vacancy/edit', 'VacanciesController@edit');
+// Route::get('vacancy/create', 'VacanciesController@create');
 
 Route::get('/home', 'HomeController@index')->name('home');
