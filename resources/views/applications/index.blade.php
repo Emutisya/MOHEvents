@@ -32,8 +32,7 @@
 
                     {{-- <td><a href="/vacancy/{{$Vacancies->id}}/edit" class="btn btn-info btn-sm">Edit</a></td> --}}
 
-{{--
-                    <td>{!!Form::open(['action'=>['VacanciesController@destroy',$Vacancies->id],'method'=>'POST','class'=>'delete_form'])!!}
+                    <td>{!!Form::open(['action'=>['VacanciesController@destroy',$application->id],'method'=>'POST','class'=>'delete_form'])!!}
                         {{Form::hidden('_method','DELETE')}}
                         {{Form::Submit('Delete',['class'=>"btn btn-xs btn-danger btn-sm btn-flat show_confirm", 'data-toggle'=>"tooltip"])}}
                         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -44,7 +43,7 @@
                                     e.preventDefault();
                                 }
                             });
-                        </script> --}}
+                        </script>
                         {!!Form::close()!!}</td>
 
 

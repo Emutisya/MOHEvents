@@ -82,6 +82,10 @@ class ApplicationsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $application = Application::find($id);
+
+        $application->delete();
+
+        return redirect('/application')->with('success', 'Application Handled');
     }
 }
