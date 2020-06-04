@@ -162,6 +162,10 @@
             <label for="recipient-name" class="col-form-label">Organization:</label>
             <input type="text"name="organization" class="form-control" id="recipient-name">
           </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Image</label>
+            <input type="file"name="image" class="form-control" id="recipient-name">
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -194,6 +198,7 @@
               <th>Time</th>
               <th>Date</th>
             <th>Organization</th>
+            <th>Image</th>
               <th>EDIT</th>
               <th>DELETE</th>
             </thead>
@@ -210,6 +215,7 @@
                 <td>{{$data->time }}</td>
                 <td>{{$data->date }}</td>
                 <td>{{$data->organization}}</td>
+                <td>{{$data->image}}</td>
                 <td>
                   <a href="#" class="btn btn-success">EDIT</a>
                 </td>
