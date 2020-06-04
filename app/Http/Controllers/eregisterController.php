@@ -27,6 +27,7 @@ class eregisterController extends Controller
         $events->time= $request->input('time');
         $events->date= $request->input('date');
         $events->organization=$request->input('organization');
+        $events->image=$request->input('image');
         
         $events->save();
         
