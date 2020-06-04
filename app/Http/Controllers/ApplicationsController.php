@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Task;
+
+use App\Application;
+use App\Vacancy;
 use Illuminate\Http\Request;
 
-class TasksController extends Controller
+class ApplicationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,11 +15,10 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $vacancies=Task::orderBy('created_at','asc')->paginate(3);
-
-        return view('Vacancies.index')->with('vacancies',$vacancies);
+        $applications = Application::orderBy('created_at', 'asc')->paginate(3);
+        $Vacancies = Vacancy::pluck('title', 'id');
+        return view('applications.index',compact('applications', 'Vacancies'));
     }
-
     /**
      * Show the form for creating a new resource.
      *

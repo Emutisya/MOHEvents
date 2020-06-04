@@ -29,6 +29,7 @@ Route::get('/events','eregisterController@allevents');
 Route::delete('/role-deletee/{id}','eregisterController@registerdelete');
 Auth::routes();
 Route::resource('vacancy', 'VacanciesController');
+Route::resource('application', 'ApplicationsController');
 // Route::get('vacancy/edit', 'VacanciesController@edit');
 // Route::get('vacancy/create', 'VacanciesController@create');
 
