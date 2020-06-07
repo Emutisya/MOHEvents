@@ -27,10 +27,11 @@ class eregisterController extends Controller
         $events->time= $request->input('time');
         $events->date= $request->input('date');
         $events->organization=$request->input('organization');
+        $events->image=$request->input('image');
 
         $events->save();
 
-        return redirect('/events')->with('status','New Event Registered');
+        return redirect('/events')->with('success','New Event Registered');
         }
 
 
@@ -52,7 +53,7 @@ public function registerdelete($id){
     $events =eregistration::findOrFail($id);
     $events->delete();
 
-    return redirect('/events')->with('status','Event Deleted Successfully');
+    return redirect('/events')->with('success','Event Deleted Successfully');
     }
 
 }
