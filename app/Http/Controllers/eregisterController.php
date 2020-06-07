@@ -56,4 +56,37 @@ public function registerdelete($id){
     return redirect('/events')->with('success','Event Deleted Successfully');
     }
 
+
+
+        
+    public function registeredit(Request $request, $id)
+    {
+    
+        $events = eregistration ::findOrFail( $id);
+        return view('adminEvent.events-edit')->with("events", $events);
+    
+    
+    }
+
+    
+    
+    public function registerupdate(Request $request, $id){
+        $events= eregistration::find($id);
+
+        $events->description = $request->input('description');
+        $events->location= $request->input('location');
+        $events->time= $request->input('time');
+        $events->date= $request->input('date');
+        $events->organization=$request->input('organization');
+   
+
+
+   
+    $events->update();
+    
+    return redirect('/events')->with('success','Your Data is updated');
+    }
+
+
+
 }

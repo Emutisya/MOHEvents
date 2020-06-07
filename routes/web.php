@@ -27,6 +27,10 @@ Route::post('/save-events','eregisterController@store');
 
 Route::get('/events','eregisterController@allevents');
 Route::delete('/role-deletee/{id}','eregisterController@registerdelete');
+Route::get('/role-editd/{id}','eregisterController@registeredit');
+Route::put('role-eregister-update/{id}','eregisterController@registerupdate');
+
+
 Auth::routes();
 Route::resource('vacancy', 'VacanciesController');
 Route::resource('application', 'ApplicationsController');

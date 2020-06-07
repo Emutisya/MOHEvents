@@ -98,14 +98,19 @@
                 <td>{{$data->organization}}</td>
                 <td>{{$data->image}}</td>
                 <td>
-                  <a href="#" class="btn btn-success">EDIT</a>
+                <a href ="/role-editd/{{$data->id}}" class="btn btn-info btn-sm">EDIT</a>
                 </td>
                 <td>
                   <form action="/role-deletee/{{$data->id}}" method="post" class="delete_form">
                     {{ csrf_field() }}
                     {{ method_field('DELETE')}}
-                    <button type="submit" class="btn btn-danger">DELETE</button>
-                    <script>
+
+
+
+          
+
+                    <button type="submit" class="btn btn-xs btn-danger btn-sm btn-flat show_confirm">DELETE</button>
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
                       $(document).ready(function() {
                         $('.delete_form').on('submit', function() {
                           if (confirm("Are You Sure You Want To Delete It?")) {
