@@ -11,7 +11,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="/save-events" method="POST">
+        <form action="/save-events" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
 
 
@@ -96,7 +96,7 @@
                 <td>{{$data->time }}</td>
                 <td>{{$data->date }}</td>
                 <td>{{$data->organization}}</td>
-                <td>{{$data->image}}</td>
+                <td><img style="width:100%" src="/public/uploads/{{$data->image}}"></td>
                 <td>
                 <a href ="/role-editd/{{$data->id}}" class="btn btn-info btn-sm">EDIT</a>
                 </td>
