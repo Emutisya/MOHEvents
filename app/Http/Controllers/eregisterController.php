@@ -38,14 +38,14 @@ class eregisterController extends Controller
           //get just file name
           $filename= pathinfo($filenameWithExt, PATHINFO_FILENAME);
           //get just extension
-          $extension=$file->getClientOriginalExtension();
-         // $extension=$request->file('image')->getClientOriginalExtension();
+         // $extension=$file->getClientOriginalExtension();
+          $extension=$request->file('image')->getClientOriginalExtension();
           //filename to store
-          $fileNameToStore=time().'.'.$extension;
-         // $fileNameToStore=$filename.'_'.time().'.'.$extension;
+         // $fileNameToStore=time().'.'.$extension;
+         $fileNameToStore=$filename.'_'.time().'.'.$extension;
           //upload Image
-         $file->move('public/uploads',$fileNameToStore);
-          //$path=$request->file('image')->storeAs('public/uploads',$fileNameToStore);
+          $file->move('public/uploads',$fileNameToStore);
+        //  $path=$request->file('image')->storeAs('public/uploads',$fileNameToStore);
       }
 
       else{

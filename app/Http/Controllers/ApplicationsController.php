@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Application;
 use App\Vacancy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ApplicationsController extends Controller
 {
@@ -88,4 +89,24 @@ class ApplicationsController extends Controller
 
         return redirect('/application')->with('success', 'Application Handled');
     }
+
+    public function download($id)
+    {
+        
+        $application = Application::find($id);
+    
+        $pathToFile=public_path('\cvs\public\cvs/');
+        $file_name=$application->CVfile;
+        $download_name='Download-'.$file_name;
+
+        
+
+        return response()->download($pathToFile.$file_name, $download_name);
+
+            // return Storage::download($application->CVfile);
+       // $url = Storage::url($application->CVfile);
+    }
+    
+
+    
 }

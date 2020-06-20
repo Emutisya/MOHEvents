@@ -34,6 +34,10 @@ Route::put('role-eregister-update/{id}','eregisterController@registerupdate');
 Auth::routes();
 Route::resource('vacancy', 'VacanciesController');
 Route::resource('application', 'ApplicationsController');
+//Route::get('/file/download{id}','ApplicationsController@download')->name('downloadfile');
+
+Route::get('{id}/file-download',['as'=>'file-download','uses'=>'ApplicationsController@download']);
+
 // Route::get('vacancy/edit', 'VacanciesController@edit');
 // Route::get('vacancy/create', 'VacanciesController@create');
 

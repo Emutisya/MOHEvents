@@ -17,6 +17,8 @@
         <th>email</th>
         <th>slot</th>
         <th>cv-file</th>
+        <th>Delete</th>
+        <th>Download</th>
 
       </thead>
       <tbody id="myTable">
@@ -29,10 +31,12 @@
                     <td>{{$Vacancies[$application->Vacancy_id]}}</td>
                    <td>{{ $application->CVfile }}</td>
 
+             
+
 
                     {{-- <td><a href="/vacancy/{{$Vacancies->id}}/edit" class="btn btn-info btn-sm">Edit</a></td> --}}
 
-                    <td>{!!Form::open(['action'=>['VacanciesController@destroy',$application->id],'method'=>'POST','class'=>'delete_form'])!!}
+                    <td>{!!Form::open(['action'=>['ApplicationsController@destroy',$application->id],'method'=>'POST','class'=>'delete_form'])!!}
                         {{Form::hidden('_method','DELETE')}}
                         {{Form::Submit('Delete',['class'=>"btn btn-xs btn-danger btn-sm btn-flat show_confirm", 'data-toggle'=>"tooltip"])}}
                         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -50,6 +54,7 @@
 
 
                    </td>
+                   <td>   <a href= " {{ route('file-download',[$application->id]) }}" class="btn btn-info btn-sm">Download CV</a></td>
                     <tr>
 
                 @endforeach
