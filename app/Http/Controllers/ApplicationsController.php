@@ -6,7 +6,7 @@ use App\Application;
 use App\Vacancy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use File;
 class ApplicationsController extends Controller
 {
     /**
@@ -92,21 +92,26 @@ class ApplicationsController extends Controller
 
     public function download($id)
     {
-        
+
         $application = Application::find($id);
-    
-        $pathToFile=public_path('\cvs\public\cvs/');
-        $file_name=$application->CVfile;
-        $download_name='Download-'.$file_name;
 
-        
+        // $pathToFile=public_path('\cvs\public\cvs/');
+        // $file_name=$application->CVfile;
+        // $download_name='Download-'.$file_name;
+        $data = $application->CVfile;
+        return response()->make($data, 200, array('Content-type' => $application->mime, 'Content-length' => $application->size));
 
-        return response()->download($pathToFile.$file_name, $download_name);
+
+        // return response()->make($application->CVfile, 200, array(
+        //     'Content-Type' => ($application->mime)->buffer($data)
+        // ));
+
+        // return response()->download($pathToFile.$file_name, $download_name);
 
             // return Storage::download($application->CVfile);
        // $url = Storage::url($application->CVfile);
     }
-    
 
-    
+
+
 }

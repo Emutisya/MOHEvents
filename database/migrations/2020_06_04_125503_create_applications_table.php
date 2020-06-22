@@ -18,7 +18,7 @@ class CreateApplicationsTable extends Migration
             $table->unsignedBigInteger('Vacancy_id');
             $table->string('username');
             $table->string('email');
-            $table->string('CVfile');
+            $table->binary('CVfile');
 
             $table->timestamps();
             $table->foreign('Vacancy_id')->references('id')->on('vacancies')->onDelete('cascade');

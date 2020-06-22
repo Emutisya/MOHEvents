@@ -18,7 +18,7 @@ class CreateVacanciesTable extends Migration
                 $table->id();
                 $table->unsignedBigInteger('user_id');
                 $table->string('title');
-            
+
                 $table->text('description');
 
                 $table->timestamps();
@@ -30,6 +30,7 @@ class CreateVacanciesTable extends Migration
     /**
      * Reverse the migrations.
      *
+     * 
      * @return void
      */
     public function down()
