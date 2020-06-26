@@ -15,8 +15,8 @@ class VacanciesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $vacancies = Vacancy::orderBy('created_at', 'asc')->paginate(3);
+    {    $id = Auth::user()->id;
+        $vacancies = Vacancy::orderBy('created_at', 'asc')->where('user_id',$id)->paginate(3);
 
         return view('Vacancies.index')->with('vacancies', $vacancies);
     }
@@ -112,7 +112,7 @@ class VacanciesController extends Controller
 
         $vacancy->title = $request->input('title');
 
-        $$vacancy->description = $request->input('description');
+        $vacancy->description = $request->input('description');
 
 
         $vacancy->save();

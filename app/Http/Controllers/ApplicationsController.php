@@ -7,6 +7,8 @@ use App\Vacancy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use File;
+use Illuminate\Support\Facades\Auth;
+use finfo;
 class ApplicationsController extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class ApplicationsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  $id = Auth::user()->id;
         $applications = Application::orderBy('created_at', 'asc')->paginate(3);
         $Vacancies = Vacancy::pluck('title', 'id');
         return view('applications.index',compact('applications', 'Vacancies'));
@@ -95,21 +97,17 @@ class ApplicationsController extends Controller
 
         $application = Application::find($id);
 
-        // $pathToFile=public_path('\cvs\public\cvs/');
-        // $file_name=$application->CVfile;
-        // $download_name='Download-'.$file_name;
-        $data = $application->CVfile;
-        return response()->make($data, 200, array('Content-type' => $application->mime, 'Content-length' => $application->size));
 
+         $image = $application->CVfile; // your base64 encoded
+         $image = str_replace('data:image/jpeg;base64,', '', $image);
+         $image = str_replace(' ', '+', $image);
+         $imageName = str_random(10).'.'.'jpeg';
+         \File::put(storage_path(). '/' . $imageName, base64_decode($image));
+         $path = storage_path().'/'.$imageName;
+         if (file_exists($path)) {
+             return response()->download($path);
+         }
 
-        // return response()->make($application->CVfile, 200, array(
-        //     'Content-Type' => ($application->mime)->buffer($data)
-        // ));
-
-        // return response()->download($pathToFile.$file_name, $download_name);
-
-            // return Storage::download($application->CVfile);
-       // $url = Storage::url($application->CVfile);
     }
 
 

@@ -1,0 +1,123 @@
+
+@misc{noauthor_uhuru_nodate,
+	title = {Uhuru to host virtual {Madaraka} {Day} fete},
+	url = {https://www.nation.co.ke/news/Uhuru-host-virtual-Madaraka-Day-fete/1056-5564714-cos3kn/index.html},
+	abstract = {The virtual celebrations will run from 8am.},
+	language = {en},
+	urldate = {2020-05-26},
+	journal = {Daily Nation},
+	note = {Library Catalog: www.nation.co.ke},
+	file = {Snapshot:files/2/index.html:text/html}
+}
+
+@article{noauthor_why_nodate,
+	title = {Why covid-19 seems to spread more slowly in {Africa}},
+	issn = {0013-0613},
+	url = {https://www.economist.com/middle-east-and-africa/2020/05/16/why-covid-19-seems-to-spread-more-slowly-in-africa?fsrc=scn/fb/te/bl/ed/thesmoulderingpandemicwhycovid19seemstospreadmoreslowlyinafricamiddleeastafrica&fbclid=IwAR3hrvh7uhkJtRgaI2RCD1_EImsxFmch2G6xQF9InYsofaFJ_ZBZe6VFWuQ},
+	abstract = {Transport links are worse},
+	urldate = {2020-05-26},
+	journal = {The Economist},
+	file = {The Economist Snapshot:files/4/why-covid-19-seems-to-spread-more-slowly-in-africa.html:text/html}
+}
+
+@misc{noauthor_google_nodate,
+	title = {Google {Maps}},
+	url = {https://www.google.com/maps/place/Nairobi+Safari+Walk/@-1.336413,36.7754133,17z/data=!3m1!4b1!4m5!3m4!1s0x182f1aa8d78adf03:0x690abeb8fd6038f7!8m2!3d-1.336413!4d36.777602},
+	abstract = {Find local businesses, view maps and get driving directions in Google Maps.},
+	language = {en-KE},
+	urldate = {2020-06-02},
+	journal = {Google Maps},
+	note = {Library Catalog: www.google.com},
+	file = {Snapshot:files/6/data=!3m1!4b1!4m5!3m4!1s0x182f1aa8d78adf030x690abeb8fd6038f7!8m2!3d-1.336413!4d36.html:text/html}
+}
+
+@misc{noauthor_purpink_nodate,
+	title = {Purpink {Gift} {Shop} - {Home}},
+	url = {https://www.facebook.com/PurpinkGifts/?__tn__=kC-RH-R&eid=ARD1PLW5oN4AipbD3J5mI3gpaOHFXZOyXlxj8tryqSaFzIcgzAKQhsR-f8vtrNYvyLbzl3AlOl1STNMr1T4-7Q6rEGZuUsF_3TMqrhq4_qlav4P2PaKtJ1wmOtoJaCbOZBNeOdPQOlqdmfqT7mklQOLqOpN2X7RfXv6dDuIVPLBQymfpMA&hc_ref=ARTlQ2EwXFvGxHsvZb7I0frkO6VSp-hrAGgM_OLTTVZibRSmq2eZrn6BZUmc-1KutsE&fref=nf&ft[tn]=kC-R-RH-R-R&ft[adid]=6185312911386&ft[qid]=6833852736676181286&ft[mf_story_key]=-129820754424856463&ft[is_sponsored]=1&ft[ei]=AI%40AQI82Uc3LH3fRDyB9pN8Gpp5oQC9y37DJo5F4d4BHWquua155YDaTBF5fMokZt-xdInQjFffqrjYyZOJZ0jkaNKP&ft[top_level_post_id]=2831998843562750&ft[content_owner_id_new]=337320326363960&ft[call_to_action_type]=SHOP_NOW&ft[page_id]=337320326363960&ft[src]=10&ft[story_location]=5&ft[story_attachment_style]=multi_share&ft[view_time]=1591130330&ft[filter]=h_nor&ft[tds_flgs]=3&ft[page_insights][337320326363960][page_id]=337320326363960&ft[page_insights][337320326363960][page_id_type]=page&ft[page_insights][337320326363960][actor_id]=337320326363960&ft[page_insights][337320326363960][dm][isShare]=0&ft[page_insights][337320326363960][dm][originalPostOwnerID]=0&ft[page_insights][337320326363960][psn]=EntStatusCreationStory&ft[page_insights][337320326363960][post_context][object_fbtype]=266&ft[page_insights][337320326363960][post_context][publish_time]=1586452218&ft[page_insights][337320326363960][post_context][story_name]=EntStatusCreationStory&ft[page_insights][337320326363960][post_context][story_fbid][0]=2831998843562750&ft[page_insights][337320326363960][role]=1&ft[page_insights][337320326363960][sl]=5&ft[page_insights][337320326363960][targets][0][actor_id]=337320326363960&ft[page_insights][337320326363960][targets][0][page_id]=337320326363960&ft[page_insights][337320326363960][targets][0][post_id]=2831998843562750&ft[page_insights][337320326363960][targets][0][role]=1&ft[page_insights][337320326363960][targets][0][share_id]=0&ft[fbfeed_location]=1&ft[insertion_position]=18&ft[ordinal_position]=19%3A5},
+	urldate = {2020-06-02},
+	file = {Purpink Gift Shop - Home:files/8/PurpinkGifts.html:text/html}
+}
+
+@article{agard_assessing_2013,
+	title = {{ASSESSING} {PUBLIC} {TRANSPORT} {TRAVEL} {BEHAVIOUR} {FROM} {SMART} {CARD} {DATA} {WITH} {ADVANCED} {DATA} {MINING} {TECHNIQUES}},
+	abstract = {Smart card automated fare collection system are continuously gathering data on transactions made in public transport systems. While this data is not mainly aimed to planning purposes, it can provide very useful evidences on travel behaviour variability over space and time. The aim of this paper is to present innovative data mining techniques for grouping and characterising public transport users. This study uses data from the Gatineau, Québec, public transport agency smart card data. Covering a one-year periods, 9.4 millions transactions were recorded on the 200 bus network. An innovative distance calculation technique is proposed to apply the k-means clustering method. This distance measurement better captures the likelihood of travel behaviour between two different cardholders. The method has been applied to a set of 4.45 millions cards-day to uncover 3 clusters of travel behaviour among the users.},
+	language = {en},
+	author = {Agard, Bruno and Nia, Vahid PARTOVI and Trépanier, Martin},
+	year = {2013},
+	pages = {13},
+	file = {Agard et al. - 2013 - ASSESSING PUBLIC TRANSPORT TRAVEL BEHAVIOUR FROM S.pdf:files/9/Agard et al. - 2013 - ASSESSING PUBLIC TRANSPORT TRAVEL BEHAVIOUR FROM S.pdf:application/pdf}
+}
+
+@misc{noauthor_7_nodate,
+	title = {The 7 {Most} {Important} {Data} {Mining} {Techniques} - {Data} {Science} {Central}},
+	url = {https://www.datasciencecentral.com/profiles/blogs/the-7-most-important-data-mining-techniques},
+	urldate = {2020-06-02},
+	file = {The 7 Most Important Data Mining Techniques - Data Science Central:files/12/the-7-most-important-data-mining-techniques.html:text/html}
+}
+
+@book{pujari_data_2001,
+	title = {Data {Mining} {Techniques}},
+	isbn = {978-81-7371-380-4},
+	abstract = {This Book Addresses All The Major And Latest Techniques Of Data Mining And Data Warehousing. It Deals With The Latest Algorithms For Discussing Association Rules, Decision Trees, Clustering, Neural Networks And Genetic Algorithms. The Book Also Discusses The Mining Of Web Data, Temporal And Text Data. It Can Serve As A Textbook For Students Of Compuer Science, Mathematical Science And Management Science, And Also Be An Excellent Handbook For Researchers In The Area Of Data Mining And Warehousing.},
+	language = {en},
+	publisher = {Universities Press},
+	author = {Pujari, Arun K.},
+	year = {2001},
+	note = {Google-Books-ID: dH2KQhJboSYC}
+}
+
+@misc{noauthor_data_nodate,
+	title = {Data {Mining} {Tutorial}: {Process}, {Techniques}, {Tools}, {EXAMPLES}},
+	url = {https://www.guru99.com/data-mining-tutorial.html},
+	urldate = {2020-06-02},
+	file = {Data Mining Tutorial\: Process, Techniques, Tools, EXAMPLES:files/16/data-mining-tutorial.html:text/html}
+}
+
+@book{olson_advanced_2008,
+	title = {Advanced {Data} {Mining} {Techniques}},
+	isbn = {978-3-540-76917-0},
+	abstract = {The intent of this book is to describe some recent data mining tools that have proven effective in dealing with data sets which often involve unc- tain description or other complexities that cause difficulty for the conv- tional approaches of logistic regression, neural network models, and de- sion trees. Among these traditional algorithms, neural network models often have a relative advantage when data is complex. We will discuss methods with simple examples, review applications, and evaluate relative advantages of several contemporary methods. Book Concept Our intent is to cover the fundamental concepts of data mining, to dem- strate the potential of gathering large sets of data, and analyzing these data sets to gain useful business understanding. We have organized the material into three parts. Part I introduces concepts. Part II contains chapters on a number of different techniques often used in data mining. Part III focuses on business applications of data mining. Not all of these chapters need to be covered, and their sequence could be varied at instructor design. The book will include short vignettes of how specific concepts have been applied in real practice. A series of representative data sets will be generated to demonstrate specific methods and concepts. References to data mining software and sites such as www.kdnuggets.com will be provided. Part I: Introduction Chapter 1 gives an overview of data mining, and provides a description of the data mining process. An overview of useful business applications is provided.},
+	language = {en},
+	publisher = {Springer Science \& Business Media},
+	author = {Olson, David L. and Delen, Dursun},
+	month = jan,
+	year = {2008},
+	keywords = {Business \& Economics / Business Mathematics, Business \& Economics / General, Business \& Economics / Information Management, Business \& Economics / Operations Research, Computers / Databases / Data Mining}
+}
+
+@article{kyoung-jae_development_2005,
+	title = {Development of {Web}-based {Intelligent} {Recommender} {Systems} using {Advanced} {Data} {Mining} {Techniques}},
+	volume = {12},
+	issn = {1598-6284},
+	url = {http://www.koreascience.or.kr/article/JAKO200504840757428.page},
+	abstract = {Product recommender system is one of the most popular techniques for customer relationship management. In addition, collaborative filtering (CF) has been known to be one of the most successful recommendation techniques in product recommender systems. However, CF has some limitations such as sparsity and scalability problems. This study proposes hybrid cluster analysis and case-based reasoning (CBR) to address these problems. CBR may relieve the sparsity problem because it recommends products using customer profile and transaction data, but it may still give rise to scalability problem. Thus, this study uses cluster analysis to reduce search space prior to CBR for scalability Problem. For cluster analysis, this study employs hybrid genetic and K-Means algorithms to avoid possibility of convergence in local minima of typical cluster analyses. This study also develops a Web-based prototype system to test the superiority of the proposed model.},
+	language = {kor},
+	number = {3},
+	urldate = {2020-06-02},
+	journal = {Journal of Information Technology Applications and Management},
+	author = {Kyoung-Jae, Kim and Hyunchul, Ahn},
+	year = {2005},
+	note = {Publisher: Korea Data Strategy Society},
+	pages = {41--56},
+	file = {Full Text PDF:files/20/Kyoung-Jae and Hyunchul - 2005 - Development of Web-based Intelligent Recommender S.pdf:application/pdf}
+}
+
+@book{sundar_performance_nodate,
+	title = {Performance {Analysis} of {Classification} {Data} {Mining} {Techniques} {Over} {Heart} {Disease} {Data} {Base}},
+	abstract = {The healthcare industry collects huge amounts of healthcare data which, unfortunately, are not “mined ” to discover hidden information for effective decision making. Discovery of hidden patterns and relationships often goes unexploited. Advanced data mining techniques can help remedy this situation. This paper describes about a prototype using data mining techniques, namely Naïve Bayes and WAC (weighted associative classifier).This system can answer complex “what if ” queries which traditional decision support systems cannot. Using medical profile0073 such as age, sex, blood pressure and blood sugar it can predict the likelihood of patients getting a heart disease. It enables significant knowledge, e.g. patterns, relationships between medical factors related to heart disease, to be established. It can serve a training tool to train nurses and medical students to diagnose patients with heart disease. It is a web based user friendly system and can be used in hospitals if they have a data ware house for their hospital. Presently we are analyzing the performances of the two classification data mining techniques by using various performance measures.},
+	author = {Sundar, N. Aditya and Latha, P. Pushpa and Ch, M. Rama},
+	file = {Citeseer - Snapshot:files/22/summary.html:text/html;Citeseer - Full Text PDF:files/23/Sundar et al. - Performance Analysis of Classification Data Mining.pdf:application/pdf}
+}
+
+@book{singhal_data_2007,
+	title = {Data {Warehousing} and {Data} {Mining} {Techniques} for {Cyber} {Security}},
+	isbn = {978-0-387-47653-7},
+	abstract = {Data warehousing and data mining provide techniques for collecting information from distributed databases and for performing data analysis. The ever expanding, tremendous amount of data collected and stored in large databases has far exceeded our human ability to comprehend--without the proper tools. There is a critical need for data analysis that can automatically analyze data, summarize it and predict future trends. In the modern age of Internet connectivity, concerns about denial of service attacks, computer viruses and worms are extremely important. Data Warehousing and Data Mining Techniques for Cyber Security contributes to the discipline of security informatics. The author discusses topics that intersect cyber security and data mining, while providing techniques for improving cyber security. Since the cost of information processing and internet accessibility is dropping, an increasing number of organizations are becoming vulnerable to cyber attacks. This volume introduces techniques for applications in the area of retail, finance, and bioinformatics, to name a few. Data Warehousing and Data Mining Techniques for Cyber Security is designed for practitioners and researchers in industry. This book is also suitable for upper-undergraduate and graduate-level students in computer science.},
+	language = {en},
+	publisher = {Springer Science \& Business Media},
+	author = {Singhal, Anoop},
+	month = apr,
+	year = {2007},
+	note = {Google-Books-ID: lZk9skkVjHAC},
+	keywords = {Computers / Databases / Data Mining, Computers / Databases / General, Computers / Information Technology, Computers / Information Theory, Computers / Networking / Hardware, Computers / Programming / Algorithms, Computers / Security / General, Language Arts \& Disciplines / Library \& Information Science / General}
+}
