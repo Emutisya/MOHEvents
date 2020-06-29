@@ -66,8 +66,7 @@
     <table class="table">
       <thead class="text-primary">
         <th>Title</th>
-
-        <th>Description</th>
+         <th>Description</th>
         <th>Created on</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -115,60 +114,3 @@
 
 
 
-{{--
-    <div class="card-body">
-        <div class="table-responsive">
-          <table class="table">
-            <thead class="text-primary">
-              <th>ID</th>
-        <!--      <th>Poster ID</th> -->
-              <th>description</th>
-              <th>location</th>
-              <th>Time</th>
-              <th>Date</th>
-            <th>Organization</th>
-              <th>EDIT</th>
-              <th>DELETE</th>
-            </thead>
-            <tbody id="myTable">
-
-              @foreach ($events as $data)
-
-
-              <tr>
-                <td>{{$data->id}}</td>
-              <!-- <td> 0000</td> -->
-                <td>{{$data->description }}</td>
-                <td>{{$data->location }}</td>
-                <td>{{$data->time }}</td>
-                <td>{{$data->date }}</td>
-                <td>{{$data->organization}}</td>
-                <td>
-                  <a href="#" class="btn btn-success">EDIT</a>
-                </td>
-                <td>
-                  <form action="/role-deletee/{{$data->id}}" method="post" class="delete_form">
-                    {{ csrf_field() }}
-                    {{ method_field('DELETE')}}
-                    <button type="submit" class="btn btn-danger">DELETE</button>
-                    <script>
-                      $(document).ready(function() {
-                        $('.delete_form').on('submit', function() {
-                          if (confirm("Are You Sure You Want To Delete It?")) {
-                            return true;
-                          } else {
-                            return false;
-                          }
-                        });
-                      });
-                    </script>
-                  </form>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> --}}

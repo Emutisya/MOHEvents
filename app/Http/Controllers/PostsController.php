@@ -33,7 +33,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('title','desc')->get();
 
         $posts = Post::orderBy('created_at','desc')->paginate(10);
-        return view('resourceViews.index')->with('posts', $posts);
+        return view('resourceViews.dashboard')->with('posts', $posts);
     }
 
     /**
@@ -84,7 +84,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/resourceViews')->with('success', 'Post Created');
+        return redirect('/resources')->with('success', 'Post Created');
     }
 
     /**
@@ -108,7 +108,7 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        
+
         //Check if post exists before deleting
         if (!isset($post)){
             return redirect('/resourceViews')->with('error', 'No Post Found');
@@ -160,7 +160,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/resourceViews')->with('success', 'Post Updated');
+        return redirect('/')->with('success', 'Post Updated');
     }
 
     /**
@@ -172,23 +172,23 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
-        
+
         //Check if post exists before deleting
         if (!isset($post)){
-            return redirect('/resourceViews')->with('error', 'No Post Found');
+            return redirect('/resources')->with('error', 'No Post Found');
         }
 
         // Check for correct user
         if(auth()->user()->id !==$post->user_id){
-            return redirect('/resourceViews')->with('error', 'Unauthorized Page');
+            return redirect('/resources')->with('error', 'Unauthorized Page');
         }
 
         if($post->cover_image != 'noimage.jpg'){
             // Delete Image
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
-        
+
         $post->delete();
-        return redirect('/resourceViews')->with('success', 'Post Removed');
+        return redirect('/resources')->with('success', 'Post Removed');
     }
 }

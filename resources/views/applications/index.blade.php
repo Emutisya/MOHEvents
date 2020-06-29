@@ -16,7 +16,7 @@
 
         <th>email</th>
         <th>slot</th>
-        <th>cv-file</th>
+    
         <th>Delete</th>
         <th>Download</th>
 
@@ -29,9 +29,9 @@
 
                     <td>{{$application->email }}</td>
                     <td>{{$Vacancies[$application->Vacancy_id]}}</td>
-                   <td>{{ $application->CVfile }}</td>
 
-             
+
+
 
 
                     {{-- <td><a href="/vacancy/{{$Vacancies->id}}/edit" class="btn btn-info btn-sm">Edit</a></td> --}}
