@@ -22,7 +22,14 @@ class CreateEregistrationsTable extends Migration
             $table->date('date');
             $table->timestamps();
             $table->string('organization');
+<<<<<<< HEAD
             $table->string('image');
+=======
+            $table->string('image'); 
+
+            
+
+>>>>>>> 24ad39afb7df2f14029f886c0cfb6179e2ddf016
         });
     }
 
