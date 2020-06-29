@@ -21,6 +21,9 @@ Route::get('/admin', function () {
     return view('adminEvent.dashboard');
 });
 
+
+Route::get('/resources', 'DashboardController@index');
+Route::resource('resourceViews','PostsController');
 Route::get('/events','eregisterController@index');
 Route::post('/save-events','eregisterController@store');
 
