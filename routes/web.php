@@ -24,7 +24,7 @@ Route::get('/admin', function () {
 
 
 Route::get('/resources', 'DashboardController@index');
-Route::resource('resourceViews','PostsController');
+Route::resource('adminPostViews','PostsController');
 Route::get('/events','eregisterController@index');
 Route::post('/save-events','eregisterController@store');
 
