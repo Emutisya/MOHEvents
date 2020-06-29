@@ -37,30 +37,46 @@
 
 
               <div class="col-lg-6 col-5 text-right">
-                <button type="button" class="btn btn-primary btn-white" data-toggle="modal" data-target="#exampleModal" >New Vacancy</button>
+                <button type="button" class="btn btn-primary btn-white" data-toggle="modal" data-target="#exampleModal" >Add Post</button>
 
               </div>
 
                     @endsection
 
 
-
+                    <div class="card-body">
+               
                     @section('content')
+               
                     @if(count($posts) > 0)
-                        <table class="table table-striped">
-                            <tr>
-                                <th>Title</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
+                    <div class="table-responsive">
+                        <table class="table">
+                              {{-- <table class="table table-striped"> --}}
+                            <thead class="text-primary">
+                              <th>ID</th>
+                            {{-- <tr> --}}
+                             <th>Title</th>
+                            <th>CREATED AT</th>
+                            <th>UPDATED AT</th>
+                            <th>Image</th>
+                            <th>EDIT</th>
+                            <th>DELETE</th>
+                              </thead>
+                            {{-- </tr> --}}
                             @foreach($posts as $post)
                                 <tr>
+                                <td>{{$post->id}}</td>
                                     <td>{{$post->title}}</td>
-                                    <td><a href="/resourceViews/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
+                                <td>{{$post->created_at}}</td>
+                                <td>{{$post->updated_at}}</td>
+                                <td>{{$post->cover_image}}</td>
+                               {{-- <td> <img   style="width:100%;" src="/storage/cover_images/{{$post->cover_image}}"></td> --}}
+                                
+                                    <td><a href="/resourceViews/{{$post->id}}/edit" class="btn btn-info btn-sm">Edit</a></td>
                                     <td>
                                         {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                             {{Form::hidden('_method', 'DELETE')}}
-                                            {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                            {{Form::submit('Delete', ['class' => 'btn btn-xs btn-danger btn-sm btn-flat show_confirm'])}}
                                         {!!Form::close()!!}
                                     </td>
                                 </tr>
