@@ -19,7 +19,6 @@ class eregisterController extends Controller
 
         public function store(Request $request){
 
-<<<<<<< HEAD
             $events= new eregistration;
         
         
@@ -30,7 +29,6 @@ class eregisterController extends Controller
         $events->organization=$request->input('organization');
         $events->image=$request->input('image');
         
-=======
        
 
 
@@ -75,7 +73,6 @@ class eregisterController extends Controller
       $events->organization=$request->input('organization');
      $events->image=$fileNameToStore;
 
->>>>>>> 24ad39afb7df2f14029f886c0cfb6179e2ddf016
         $events->save();
 
         return redirect('/events')->with('success','New Event Registered');

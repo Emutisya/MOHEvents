@@ -54,6 +54,13 @@
                   <span class="nav-link-text">Applications</span>
                 </a>
               </li>
+              
+            <li class="nav-item">
+              <a class="nav-link" href="/resources">
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">Resources</span>
+              </a>
+            </li>
 
   </nav>
   <!-- Main content -->
