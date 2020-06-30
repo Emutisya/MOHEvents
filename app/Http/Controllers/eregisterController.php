@@ -37,7 +37,7 @@ class eregisterController extends Controller
       $this->validate($request,[
        // 'image' => 'required | mimes:jpeg,jpg,png | max:1000',
         'image'=> 'image|max:1999'
-      ]);
+      ]);    
 
       //handle file upload
       if($request -> hasfile('image')){
@@ -65,7 +65,18 @@ class eregisterController extends Controller
 
       else{
           $fileNameToStore='noimage.jpg';
-      }
+      }     
+     
+     /* if($request -> hasfile('image')){
+        $file = $request->file('image');
+        $extension = $file->getClientOriginalExtension();
+        $filename = time() . '.' . $extension;
+        $file->move('uploads', $filename);
+        $events->image = $filename;
+    } else{
+        return $request;
+        $events->image = '';
+    } */
 
       //create post
 
@@ -76,7 +87,7 @@ class eregisterController extends Controller
       $events->time= $request->input('time');
       $events->date= $request->input('date');
       $events->organization=$request->input('organization');
-      $events->image=$base64;
+      $events->image=$base64; 
 
         $events->save();
 

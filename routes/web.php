@@ -45,3 +45,8 @@ Route::get('{id}/file-download',['as'=>'file-download','uses'=>'ApplicationsCont
 // Route::get('vacancy/create', 'VacanciesController@create');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//FEEDBACK
+
+Route::resource('feedback','FeedbackController');
+Route::post('feedback','FeedbackController@store');
