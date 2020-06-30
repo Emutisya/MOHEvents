@@ -96,11 +96,7 @@
                 <td>{{$data->time }}</td>
                 <td>{{$data->date }}</td>
                 <td>{{$data->organization}}</td>
-<<<<<<< HEAD
-                <td>{{$data->image}}</td>
-=======
                 <td><img style="width:100%" src="/public/uploads/{{$data->image}}"></td>
->>>>>>> 24ad39afb7df2f14029f886c0cfb6179e2ddf016
                 <td>
                 <a href ="/role-editd/{{$data->id}}" class="btn btn-info btn-sm">EDIT</a>
                 </td>

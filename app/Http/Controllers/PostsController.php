@@ -33,7 +33,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('title','desc')->get();
 
         $posts = Post::orderBy('created_at','desc')->paginate(10);
-        return view('resourceViews.dashboard')->with('posts', $posts);
+        return view('adminPostViews.dashboard')->with('posts', $posts);
     }
 
     /**
@@ -43,7 +43,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('resourceViews.create');
+        return view('adminPostViews.create');
     }
 
     /**
@@ -96,7 +96,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('resourceViews.show')->with('post', $post);
+        return view('adminPostViews.show')->with('post', $post);
     }
 
     /**
@@ -111,15 +111,15 @@ class PostsController extends Controller
 
         //Check if post exists before deleting
         if (!isset($post)){
-            return redirect('/resourceViews')->with('error', 'No Post Found');
+            return redirect('/adminPostViews')->with('error', 'No Post Found');
         }
 
         // Check for correct user
         if(auth()->user()->id !==$post->user_id){
-            return redirect('/resourceViews')->with('error', 'Unauthorized Page');
+            return redirect('/adminPostViews')->with('error', 'Unauthorized Page');
         }
 
-        return view('resourceViews.edit')->with('post', $post);
+        return view('adminPostViews.edit')->with('post', $post);
     }
 
     /**
