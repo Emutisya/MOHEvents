@@ -37,7 +37,7 @@
 
 
               <div class="col-lg-6 col-5 text-right">
-                <button type="button" class="btn btn-primary btn-white" data-toggle="modal" data-target="#exampleModal" >New Vacancy</button>
+                <button type="button" class="btn btn-primary btn-white" data-toggle="modal" data-target="#exampleModal" >New Post</button>
 
               </div>
 

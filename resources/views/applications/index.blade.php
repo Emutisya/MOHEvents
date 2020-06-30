@@ -4,7 +4,7 @@
 
 <div class="index">
                 <div clas="u-center-text">
-                    <h3 class="heading-tertiary u-margin-bottom-small">No vacancies currently</h3>
+                    <h3 class="heading-tertiary u-margin-bottom-small">No Applications Currently</h3>
 
                 </div>
 @else
@@ -16,7 +16,7 @@
 
         <th>email</th>
         <th>slot</th>
-    
+
         <th>Delete</th>
         <th>Download</th>
 

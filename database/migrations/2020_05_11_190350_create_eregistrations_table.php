@@ -15,16 +15,16 @@ class CreateEregistrationsTable extends Migration
     {
         Schema::create('eregistrations', function (Blueprint $table) {
             $table->bigIncrements('id');
-           
+
             $table->longText('description');
             $table->string('location');
             $table->time('time');
             $table->date('date');
             $table->timestamps();
             $table->string('organization');
-            $table->string('image'); 
+            $table->binary('image');
 
-            
+
 
         });
     }
