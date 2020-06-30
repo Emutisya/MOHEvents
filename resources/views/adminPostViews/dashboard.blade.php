@@ -37,11 +37,7 @@
 
 
               <div class="col-lg-6 col-5 text-right">
-<<<<<<< HEAD:resources/views/resourceViews/dashboard.blade.php
-                <button type="button" class="btn btn-primary btn-white" data-toggle="modal" data-target="#exampleModal" >New Post</button>
-=======
                 <button type="button" class="btn btn-primary btn-white" data-toggle="modal" data-target="#exampleModal" >Add Post</button>
->>>>>>> 7535d66072666a69bdf9efcddfc4989b616444bb:resources/views/adminPostViews/dashboard.blade.php
 
               </div>
 
@@ -49,9 +45,9 @@
 
 
                     <div class="card-body">
-               
+
                     @section('content')
-               
+
                     @if(count($posts) > 0)
                     <div class="table-responsive">
                         <table class="table">
@@ -75,7 +71,7 @@
                                 <td>{{$post->updated_at}}</td>
                                 <td>{{$post->cover_image}}</td>
                                {{-- <td> <img   style="width:100%;" src="/storage/cover_images/{{$post->cover_image}}"></td> --}}
-                                
+
                                     <td><a href="/resourceViews/{{$post->id}}/edit" class="btn btn-info btn-sm">Edit</a></td>
                                     <td>
                                         {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
