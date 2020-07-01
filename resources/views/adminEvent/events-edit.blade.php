@@ -33,7 +33,7 @@
                   <label for="recipient-name" class="col-form-label">Organization:</label>
                   <input type="text"name="organization" value="{{$events->organization}}" class="form-control" id="recipient-name">
                 </div>
-              
+
             </div>
             <div class="modal-footer">
             <button type="submit" class="btn btn-success">Update</button>
@@ -45,11 +45,6 @@
 
 
             @endsection
-                   
-      </div>
-    </div>
-  </div>
-
 
 
 

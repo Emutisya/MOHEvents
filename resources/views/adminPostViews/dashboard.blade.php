@@ -72,7 +72,7 @@
                                 <td>{{$post->cover_image}}</td>
                                {{-- <td> <img   style="width:100%;" src="/storage/cover_images/{{$post->cover_image}}"></td> --}}
 
-                                    <td><a href="/resourceViews/{{$post->id}}/edit" class="btn btn-info btn-sm">Edit</a></td>
+                                    <td><a href="/adminPostViews/{{$post->id}}/edit" class="btn btn-info btn-sm">Edit</a></td>
                                     <td>
                                         {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                             {{Form::hidden('_method', 'DELETE')}}

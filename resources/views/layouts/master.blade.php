@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
 
-
+  {!! Html::script('js/jquery-1.8.2.min.js')!!}
+  {!! Html::style('css/app.css') !!}
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
 </head>
 
 <body>
@@ -56,7 +58,7 @@
               </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/resources">
+              <a class="nav-link" href="/adminPostViews">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Resources</span>
               </a>

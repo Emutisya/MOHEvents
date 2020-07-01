@@ -9,7 +9,7 @@
           <div class="card bg-info">
           <div class="card-body">
             <div class="inner">
-              <h3>150</h3>
+              <h3>{{count($applications) }}</h3>
 
               <p>New Applications</p>
             </div>
@@ -26,9 +26,9 @@
           <div class="card bg-success">
             <div class="card-body">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <h3>{{count($vacancies) }}</h3>
 
-              <p>Bounce Rate</p>
+              <p>Vacancies</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -43,9 +43,9 @@
           <div class="card bg-warning">
             <div class="card-body">
             <div class="inner">
-              <h3>44</h3>
+                <h3>{{count($posts) }}</h3>
 
-              <p>User Registrations</p>
+              <p>Posts</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -60,9 +60,9 @@
           <div class="card bg-danger">
             <div class="card-body">
             <div class="inner">
-              <h3>65</h3>
+                <h3>{{count($events) }}</h3>
 
-              <p>Unique Visitors</p>
+              <p>Events</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -73,4 +73,29 @@
         </div>
         <!-- ./col -->
       </div>
+
+      <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th>Date</th>
+                 <th>Status</th>
+                <th>Cases</th>
+
+              </thead>
+              <tbody id="myTable">
+                        @foreach($body as $bodies)
+
+                        <tr>
+                            <td>{{ date('d-m-Y', strtotime($bodies['Date'])) }}</td>
+
+                            <td>{{$bodies['Status'] }}</td>
+                           <td>{{ $bodies['Cases'] }}</td>
+                        </tr>
+                        @endforeach
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
 @endsection

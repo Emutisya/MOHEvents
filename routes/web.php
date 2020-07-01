@@ -18,12 +18,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/admin', function () {
-    return view('adminEvent.dashboard');
-});
+Route::get('/admin', 'DashboardController@index');
 
 
-Route::get('/resources', 'DashboardController@index');
 Route::resource('adminPostViews','PostsController');
 Route::get('/events','eregisterController@index');
 Route::post('/save-events','eregisterController@store');

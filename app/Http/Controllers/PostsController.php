@@ -84,7 +84,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/resources')->with('success', 'Post Created');
+        return redirect('/adminPostViews')->with('success', 'Post Created');
     }
 
     /**
@@ -160,7 +160,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/')->with('success', 'Post Updated');
+        return redirect('/adminPostViews')->with('success', 'Post Updated');
     }
 
     /**
@@ -175,12 +175,12 @@ class PostsController extends Controller
 
         //Check if post exists before deleting
         if (!isset($post)){
-            return redirect('/resources')->with('error', 'No Post Found');
+            return redirect('/adminPostViews')->with('error', 'No Post Found');
         }
 
         // Check for correct user
         if(auth()->user()->id !==$post->user_id){
-            return redirect('/resources')->with('error', 'Unauthorized Page');
+            return redirect('/adminPostViews')->with('error', 'Unauthorized Page');
         }
 
         if($post->cover_image != 'noimage.jpg'){
@@ -189,6 +189,6 @@ class PostsController extends Controller
         }
 
         $post->delete();
-        return redirect('/resources')->with('success', 'Post Removed');
+        return redirect('/adminPostViews')->with('success', 'Post Removed');
     }
 }

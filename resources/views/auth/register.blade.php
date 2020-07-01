@@ -7,11 +7,11 @@
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
+                <div class="card-body register-card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
- 
+
 
                         <div class="form-group row">
                             <label for="Hospital" class="col-md-4 col-form-label text-md-right">{{ __('Hospital') }}</label>
