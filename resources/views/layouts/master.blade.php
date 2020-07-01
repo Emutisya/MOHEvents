@@ -24,7 +24,7 @@
     <div class="scrollbar-inner">
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
+          <img src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="..." style="height:   100px; width:80px">
         </a>
       </div>
       <div class="navbar-inner">
@@ -61,6 +61,13 @@
               <a class="nav-link" href="/adminPostViews">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Resources</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('feedback.index')}}">
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">Citizens' Feedback</span>
               </a>
             </li>
 
