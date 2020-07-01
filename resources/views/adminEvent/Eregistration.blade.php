@@ -96,7 +96,21 @@
                 <td>{{$data->time }}</td>
                 <td>{{$data->date }}</td>
                 <td>{{$data->organization}}</td>
-                <td><img style="width:100%" src="/public/uploads/{{$data->image}}"></td>
+
+                <td>@php
+             $image = $data->image; // your base64 encoded
+             $image = str_replace('data:image/jpeg;base64,', '', $image);
+             $image = str_replace(' ', '+', $image);
+             $imageName = str_random(10).'.'.'jpeg';
+
+             File::put(storage_path('app/public'). '/' . $imageName, base64_decode($image));
+             $path = storage_path('app/public').'/'.$imageName;
+
+            //  echo <img src="{{ asset('storage'.$path) }}" alt="" title="">
+
+                    @endphp
+ <img src="{{ asset('storage/'.$imageName) }}" alt="" title="">
+                    </td>
                 <td>
                 <a href ="/role-editd/{{$data->id}}" class="btn btn-info btn-sm">EDIT</a>
                 </td>
@@ -107,7 +121,7 @@
 
 
 
-          
+
 
                     <button type="submit" class="btn btn-xs btn-danger btn-sm btn-flat show_confirm">DELETE</button>
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">

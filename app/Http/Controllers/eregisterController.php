@@ -19,15 +19,15 @@ class eregisterController extends Controller
 
         public function store(Request $request){
 
-            $events= new eregistration;
+        //     $events= new eregistration;
 
 
-        $events->description = $request->input('description');
-        $events->location= $request->input('location');
-        $events->time= $request->input('time');
-        $events->date= $request->input('date');
-        $events->organization=$request->input('organization');
-        $events->image=$request->input('image');
+        // $events->description = $request->input('description');
+        // $events->location= $request->input('location');
+        // $events->time= $request->input('time');
+        // $events->date= $request->input('date');
+        // $events->organization=$request->input('organization');
+        // $events->image=$request->input('image');
 
 
 
@@ -36,9 +36,9 @@ class eregisterController extends Controller
 
       $this->validate($request,[
        // 'image' => 'required | mimes:jpeg,jpg,png | max:1000',
-        'image'=> 'image|max:1999'
-      ]);    
-
+        'image'=> 'required'
+      ]);
+$img=$request->image;
       //handle file upload
       if($request -> hasfile('image')){
           //get file name with extension
@@ -65,8 +65,8 @@ class eregisterController extends Controller
 
       else{
           $fileNameToStore='noimage.jpg';
-      }     
-     
+      }
+
      /* if($request -> hasfile('image')){
         $file = $request->file('image');
         $extension = $file->getClientOriginalExtension();
@@ -87,7 +87,7 @@ class eregisterController extends Controller
       $events->time= $request->input('time');
       $events->date= $request->input('date');
       $events->organization=$request->input('organization');
-      $events->image=$base64; 
+      $events->image=$base64;
 
         $events->save();
 
