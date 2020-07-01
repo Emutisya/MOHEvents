@@ -106,7 +106,7 @@
              File::put(storage_path('app/public'). '/' . $imageName, base64_decode($image));
              $path = storage_path('app/public').'/'.$imageName;
 
-            //  echo <img src="{{ asset('storage'.$path) }}" alt="" title="">
+            //  echo <img src="{{ asset('storage'.$path) }}" alt="" title="" style="height:350px">
 
                     @endphp
  <img src="{{ asset('storage/'.$imageName) }}" alt="" title="">
