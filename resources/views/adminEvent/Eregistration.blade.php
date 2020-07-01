@@ -106,10 +106,10 @@
              File::put(storage_path('app/public'). '/' . $imageName, base64_decode($image));
              $path = storage_path('app/public').'/'.$imageName;
 
-            //  echo <img src="{{ asset('storage'.$path) }}" alt="" title="" style="height:350px">
+            //  echo <img src="{{ asset('storage'.$path) }}" alt="" title="">
 
                     @endphp
- <img src="{{ asset('storage/'.$imageName) }}" alt="" title="">
+ <img src="{{ asset('storage/'.$imageName) }}" alt="" title="" style="height:50px">
                     </td>
                 <td>
                 <a href ="/role-editd/{{$data->id}}" class="btn btn-info btn-sm">EDIT</a>
