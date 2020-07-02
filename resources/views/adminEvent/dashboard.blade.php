@@ -74,7 +74,24 @@
         <!-- ./col -->
       </div>
 
-      <div class="card-body">
+      <h3 style="text-align: center; color:cornflowerblue;">KENYA COVID-19 STATISTICS</h3>
+
+<div>
+<input type="text" id="myInput"
+  style=" 
+  background-image: url('/images/search.png');
+  background-size: 30px 30px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;"
+  onkeyup="myFunction()" placeholder="Search for A Specific Date.." title="Type in a Date">
+</div>
+
+<div class="card-body">
         <div class="table-responsive">
             <table class="table">
               <thead class="text-primary">
@@ -85,7 +102,6 @@
               </thead>
               <tbody id="myTable">
                         @foreach($body as $bodies)
-
                         <tr>
                             <td>{{ date('d-m-Y', strtotime($bodies['Date'])) }}</td>
 
@@ -97,5 +113,27 @@
             </table>
         </div>
       </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
     </div>
 @endsection
