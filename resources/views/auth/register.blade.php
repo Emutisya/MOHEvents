@@ -10,13 +10,8 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto">
               <h3 class="login-heading mb-4">{{ __('Register') }}</h3>
-<<<<<<< HEAD
-
-
-=======
               
             
->>>>>>> 92443c45ace8eec7d77e44030bd6b10a89cb672b
               <form method="post"  action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
 
@@ -29,8 +24,8 @@
                                  <strong>{{ $message }}</strong>
                            </span>
                     @enderror
-                  <label for="Hospital" >{{ __('Hospital') }} </label>
-
+                 <!-- <label for="Hospital" >{{ __('Hospital') }} </label>-->
+                  <label for="Hospital" >Full Name </label>
                 </div>
 
                 <div class="form-label-group">
